@@ -11,6 +11,14 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CustomViews\ConversationsListViewCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ChatPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ConversationsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -24,14 +32,20 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ConversationsListPage.xaml.cs">
-      <DependentUpon>ConversationsListPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConversationsListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ConversationOverview.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)APIServices\IServices\IConversationsListService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)APIServices\Services\ConversationsListService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)APIServices\Utilities\Dummies.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\ConversationsListViewCell.xaml.cs">
+      <DependentUpon>ConversationsListViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ConversationsListPage.xaml.cs">
+      <DependentUpon>ConversationsListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

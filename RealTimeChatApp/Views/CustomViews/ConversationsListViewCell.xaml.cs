@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace RealTimeChatApp.Views.CustomViews
 {
-    public partial class ConversationsListViewCell : ContentPage
+    public partial class ConversationsListViewCell : ViewCell
     {
         public ConversationsListViewCell()
         {

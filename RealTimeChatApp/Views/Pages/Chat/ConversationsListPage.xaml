@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
              xmlns:vm="clr-namespace:RealTimeChatApp.ViewModels"
+             xmlns:cv="clr-namespace:RealTimeChatApp.Views.CustomViews"
              x:Class="RealTimeChatApp.Views.Pages.Chat.ConversationsListPage">
 
     <ContentPage.Resources>
@@ -13,13 +17,31 @@
     <ContentPage.Content>
 
         <StackLayout Orientation="Vertical"
-                     BindingContext="{StaticResource vm}"
-                     BackgroundColor="Black">
+                     BindingContext="{StaticResource vm}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <ListView x:Name="conversationsListView"
-                      ItemsSource="{Binding Conversations}"
-                      HasUnevenRows="True"
-                      SeparatorVisibility="None" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <ListView x:Name="conversationsListView"
+                          ItemsSource="{Binding Conversations}"
+                          HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                          Grid.Column="0"
+                          Grid.Row="1">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cv:ConversationsListViewCell/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </StackLayout>
 
     </ContentPage.Content>

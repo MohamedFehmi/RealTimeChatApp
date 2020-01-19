@@ -1,6 +1,5 @@
-﻿using System;
+﻿using RealTimeChatApp.Views.Pages.Chat;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace RealTimeChatApp
 {
@@ -10,7 +9,7 @@ namespace RealTimeChatApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ConversationsListPage());
         }
 
         protected override void OnStart()
