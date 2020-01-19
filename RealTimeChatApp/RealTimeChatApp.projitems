@@ -28,6 +28,7 @@
       <DependentUpon>ConversationsListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConversationsListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ConversationOverview.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
