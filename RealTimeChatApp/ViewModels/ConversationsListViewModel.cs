@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using RealTimeChatApp.APIServices.Services;
 using RealTimeChatApp.Models;
 
 namespace RealTimeChatApp.ViewModels

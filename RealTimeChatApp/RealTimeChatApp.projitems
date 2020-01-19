@@ -29,6 +29,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConversationsListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ConversationOverview.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)APIServices\IServices\IConversationsListService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)APIServices\Services\ConversationsListService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)APIServices\Utilities\Dummies.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
