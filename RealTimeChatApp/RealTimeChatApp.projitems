@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Chat\ConversationsListPage.xaml.cs">
       <DependentUpon>ConversationsListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConversationsListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
